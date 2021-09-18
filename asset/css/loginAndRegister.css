@@ -1,0 +1,145 @@
+.form__wrapper{
+    width: 100%;
+    min-height: 700px;
+    display: flex;
+}
+
+.form__inner{
+    margin: auto;
+    width: 400px;
+    padding: 25px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    
+}
+
+
+.login-form,
+.register-form{
+    text-align: center;
+}
+.input-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.input-box .input-title{
+    
+    font-size: 1.2rem;
+    font: bolder;
+
+}
+.input-box .inputs{
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    padding: 8px 5px;
+    padding-left:10px;
+    
+}
+.input-box.done .underline::after{
+    transform: scale(1);
+    transform-origin: left;
+}
+
+
+
+.input-box.invalid .form-message{
+    color: var(--primary-color);
+}
+
+.check-boxs.invalid .form-message{
+    color: var(--primary-color);
+}
+
+.underline{
+    width: 100%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.1);
+    transform-origin: left;
+    position: relative;
+
+}
+.underline::after{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 2px;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    background-color: red;
+    transform-origin: left;
+    transition: all 0.3s ease;
+
+
+}
+
+.input-box .inputs:focus ~.underline::after
+{
+    transform: scale(1);
+    transform-origin: left;
+
+}
+
+.check-boxs{
+    text-align: left;
+    margin-bottom: 5px;
+    padding-left: 10px;
+    cursor: pointer;
+
+}
+
+.check-boxs input[type="checkbox"]{
+    cursor: pointer;
+
+}
+.check-boxs label{
+    padding: 5px 8px;
+    cursor: pointer;
+
+}
+
+.form-message{
+    display: block;
+    text-align: left;
+    font-size: 1rem;
+}
+
+.some-text{
+    font-size: 1.3rem;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+.form__inner .social-btn,
+.form__inner .btn--login{
+    width: 100%;
+    border-radius: 10px;
+    transform: scale(1) !important;
+    padding-right: 30px;
+}
+
+.form__inner .social-btn:hover,
+.form__inner .btn--login:hover{
+    background-color: var(--secondary-color);
+    color: var(--white-color);
+}
+
+
+.policy-link{
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
